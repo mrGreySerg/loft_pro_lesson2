@@ -29,4 +29,13 @@ gulp/tasks/sass.js -> module.exports = function(){
 
 работает совместно с global.$.
 8. wiredep и useref - классные, но есть и альтернатива.
+9. npm init -y.
+10. npm install -D gulp
+11. npm install -D gulp-csso - удаление дублирующего кода сss.
+12. .pipe - выполняются последовательно.
+13. Если gulp установлен только локально, то простой вызов gulp в консоли не запустит task. Либо глобально установить gulp-cli(функция которого искать gulp плагины локально), либо используя npm.
+    1. в package.json "scripts" добавляем "serg":"gulp csso", и теперь в терминале 
+    npm run serg - запускается скрипт serg, и вызывает gulp сsso, gulp ищется не глобально, а уже в локальной области.
+    2. убираем записи, какие добавили в scripts и устанавливаем gulp-cli глобально.
+    npm install -g gulp-cli
 
